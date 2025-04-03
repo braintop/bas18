@@ -3,6 +3,5 @@
 //  קרא לפונקציה עם המספר 7 והדפס את התוצאה.
 
 const power = x=> x*x
-
 let pow1 = power(7)
 console.log(pow1)
