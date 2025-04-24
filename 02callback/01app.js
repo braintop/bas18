@@ -14,6 +14,11 @@ function compute(callback){
     let sol = callback(9, 7);
     console.log(sol)
 }
+compute(sum1);
+
+
+
+
 
 function computev2(x,y, callback){
     let sol = callback(x, y);
