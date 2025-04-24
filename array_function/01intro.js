@@ -44,3 +44,7 @@ test1(stam);
 test1(()=>{})
 
 // i love ice cream 
+
+
+//git pull origin main 
+// i love god 
