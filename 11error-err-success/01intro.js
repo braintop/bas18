@@ -14,6 +14,7 @@ function f(successCallback, errorCallback) {
         else {
             successCallback()
         }
+        
         console.log("b:" + random) //  אם יהיה שגיאה לא נתפוס אותה בזמן 
     }, 1000);
     console.log("c")
