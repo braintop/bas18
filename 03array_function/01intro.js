@@ -31,11 +31,7 @@ let power1 = (x)=>{
     return x*x;
 }
 
-let power2 = (x)=>   x*x;
-let power3 = x =>   x*x;
-let y = power3(8);
-//empty function 
-let stam = ()=>{}
+ let stam = ()=>{}
 function test1(callback){
     callback()
 }
