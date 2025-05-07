@@ -6,16 +6,13 @@ setTimeout חמש שניות,
   קיראו לה מלחצן והציגו את המספר המוחזר.
 
 */
-
 function getRandomNumberAfterDelay(callback) {
-
     setTimeout(() => {
         let x = callback()
         console.log(x)
         alert(x);
     }, 5000);
 }
-
 function myRandom() {
     let r = Math.floor(Math.random() * 100)
     return r;
