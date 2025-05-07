@@ -5,3 +5,7 @@ note books
 2.github presentation - https://docs.google.com/presentation/d/1rEo6fv_A-d8I5N3cd48m83fri8Kml1GlfK0WK-XxXOc/edit?usp=sharing 
 
 3.classroom  : https://classroom.google.com/c/Njk2OTA1Mzk4ODQ2?cjc=gmgfwou 
+
+
+course js for beginners : 
+https://www.youtube.com/watch?v=ajdRvxDWH4w&list=PLGjplNEQ1it_oTvuLRNqXfz_v_0pq6unW
