@@ -8,8 +8,8 @@ function f(callback) {
     setTimeout(() => {
         let random = Math.floor(Math.random() * 10) // 0- 10 
         if (random >= arr.length) {
-           // throw ("error happend:" + random)
-           callback()
+            throw ("error happend:" + random)
+           //callback()
         }
         console.log("b:" + random) //  אם יהיה שגיאה לא נתפוס אותה בזמן 
     }, 3000);
