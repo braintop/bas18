@@ -1,4 +1,6 @@
 var CurrentProduct = require('./ProductModel');
+var CurrentPerson= require('./PersonModel');
+
 const mongoose = require('mongoose');
 var express = require('express');
 const uri = "mongodb+srv://david:Aa123456@cluster0.gqvy99x.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
