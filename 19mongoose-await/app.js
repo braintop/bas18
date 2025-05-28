@@ -1,5 +1,5 @@
 var CurrentProduct = require('./ProductModel');
-var CurrentPerson= require('./PersonModel');
+var CurrentPerson = require('./PersonModel');
 
 const mongoose = require('mongoose');
 var express = require('express');
@@ -55,6 +55,28 @@ app.delete("/api/v1/products/:id", async (req, res) => {
         res.json({ "error": "user not found - not deleted...." })
     }
 })
+//===========================persons==========
+
+app.post('/api/v1/persons', async function (req, res) {
+
+    try {
+        let p1 = req.body;
+        var newPerson = new CurrentPerson(p1);
+        let person = await newPerson.save()
+        res.json({ "personCreated": person })
+    }
+    catch (err) {
+        res.json({ error: err.message })
+    }
+
+    // newItem.save().then(item => {
+    //     res.json({ item: item })
+    // }).catch(err => {
+    //     console.log("error 😱:" + err)
+    //     res.json({ error: item })
+
+    // });
+});
 
 
 

@@ -3,7 +3,6 @@ var PersonSchema = new mongoose.Schema({
     firstname: {
         type: String,
         require: [true, 'A person must have firstname'],
-        unique: true,
         trim: true
     },
     lastname: {
