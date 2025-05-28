@@ -6,19 +6,60 @@ const clientOptions = { serverApi: { version: '1', strict: true, deprecationErro
 
 var app = express();
 app.use(express.json())
-app.post('/api/v1/products', function (req, res) {
+app.post('/api/v1/products', async function (req, res) {
 
-    let p1 = req.body;
-    console.log(req.body)
-    var newItem = new CurrentProduct(p1);
-    newItem.save().then(item => {
+    try {
+        let p1 = req.body;
+        console.log(req.body)
+        var newItem = new CurrentProduct(p1);
+        let item = await newItem.save()
         res.json({ item: item })
-    }).catch(err => {
-        console.log("error 😱:" + err)
+    }
+    catch (err) {
         res.json({ error: item })
+    }
 
-    });
+    // newItem.save().then(item => {
+    //     res.json({ item: item })
+    // }).catch(err => {
+    //     console.log("error 😱:" + err)
+    //     res.json({ error: item })
+
+    // });
 });
+app.get("/api/v1/products", async (req, res) => {
+    let items = await CurrentProduct.find()
+    res.json(items)
+})
+app.get("/api/v1/products/:id", async (req, res) => {
+    try {
+        let id = req.params.id
+        let item = await CurrentProduct.findOne({ _id: id })
+        res.json(item)
+
+    }
+    catch (err) {
+        res.json({ "error": "user not found" })
+    }
+})
+app.delete("/api/v1/products/:id", async (req, res) => {
+    try {
+        let id = req.params.id
+        let item = await CurrentProduct.deleteOne({ _id: id })
+        res.json(item)
+
+    }
+    catch (err) {
+        res.json({ "error": "user not found - not deleted...." })
+    }
+})
+
+
+
+
+
+
+
 try {
     mongoose.connect(uri, clientOptions);
 
